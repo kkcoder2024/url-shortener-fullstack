@@ -20,7 +20,7 @@ exp.use("/signup", auth_router);
 exp.use("/login", login_router);
 exp.use("/url", router);
 exp.use("/", router);
-databaseConnection("mongodb://127.0.0.1:27017/url_shorter");
-exp.listen(PORT, (err) => {
+databaseConnection();
+exp.listen(process.env.PORT, (err) => {
   console.log("Server is Connected");
 });
