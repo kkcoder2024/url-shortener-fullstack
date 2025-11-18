@@ -7,8 +7,8 @@ import { login_router } from "./routes/login.js";
 const PORT = const PORT = process.env.PORT || 8000;
 exp.use(
   cors({
-    origin: "http://localhost:5173",
-    "https://url-shortener-fullstack-six.vercel.app/"
+    origin: ["http://localhost:5173",
+    "https://url-shortener-fullstack-six.vercel.app/"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
