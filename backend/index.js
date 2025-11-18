@@ -4,7 +4,7 @@ const exp = express();
 import { router } from "./routes/url.js";
 import { auth_router } from "./routes/auth.js";
 import { login_router } from "./routes/login.js";
-const PORT = const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000;
 exp.use(
   cors({
     origin: ["http://localhost:5173",
