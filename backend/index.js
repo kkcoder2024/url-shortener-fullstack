@@ -4,7 +4,7 @@ const exp = express();
 import { router } from "./routes/url.js";
 import { auth_router } from "./routes/auth.js";
 import { login_router } from "./routes/login.js";
-const PORT = 8000;
+const PORT = const PORT = process.env.PORT || 8000;
 exp.use(
   cors({
     origin: "http://localhost:5173",
@@ -21,6 +21,6 @@ exp.use("/login", login_router);
 exp.use("/url", router);
 exp.use("/", router);
 databaseConnection();
-exp.listen(process.env.PORT, (err) => {
+exp.listen(PORT, (err) => {
   console.log("Server is Connected");
 });
